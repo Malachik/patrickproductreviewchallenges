@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Fontfamily */
+  --font-fam-primary: "Montserrat", sans-serif;
+  --font-fam-secondary: "Fraunces", serif;
+
+  /* COLOR */
+  --clr-bg-cream: hsl(30, 38%, 92%);
+  --clr-gray: hsl(228, 12%, 48%);
+  --clr-green500-button: hsl(158, 36%, 37%);
+  --clr-green700-active-button: hsl(158, 42%, 18%);
+  --clr-black: hsl(212, 21%, 14%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* LETTER SPACING */
+  --ls-0px: 0px;
+  --ls-5px: 0.5em;
+
+  /*  LINE HEIGHT */
+  --lh-100: 1;
+  --lh-160: 1.6;
+  --lh-110: 1.1;
+  --lh-120: 1.2;
+  /* BORDER RADIUS */
+  --br-24px: 1.5rem;
+  --br-12px: 0.75rem;
+
+  /* SPACING */
+  --size-4px: 0.25rem;
+  --size-8px: 0.5rem;
+  --size-12px: 0.75rem;
+  --size-14px: 0.875rem;
+  --size-16px: 1rem;
+  --flow-1rem: 1rem;
+  --size-18px: 1.125rem;
+  --size-20px: 1.25rem;
+  --size-24px: 1.5rem;
+  --size-28px: 1.75rem;
+  --size-1x8px: 1.8rem;
+  --size-32px: 2rem;
+  --size-36px: 2.25rem;
+  --size-40px: 2.5rem;
+  --size-48px: 3rem;
+  --size-60px: 3.75rem;
+  --size-72px: 4.5rem;
+  --size-84px: 5.25rem;
+  --size-96px: 6rem;
+  --size-128px: 8rem;
+  --size-160px: 160px;
+  --size-350px: 21.875rem;
+  --size-700px: 43.75rem;
+
+  /* font weight */
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+  /* spacing */
+  --switcher-target-container-width: 476px;
+  --switcher-vertical-alignment: stretch;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+body {
+  font-family: var(--font-fam-primary);
+  font-weight: var(--fw-400);
+  color: var(--clr-gray);
+  font-size: var(--size-14px);
+  background-color: var(--clr-bg-cream);
+}
+
+.product__main-wrapper {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: var(--size-16px);
+}
+
+.product__content-wrapper {
+  --content-padding: 1.5rem;
+  border-radius: var(--size-8px);
+  overflow: hidden;
+  background-color: var(--clr-white);
+  display: grid;
+  max-width: 600px;
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+
+.card__content-wrapper {
+  padding: var(--size-24px);
+  display: grid;
+  gap: 1rem;
+}
+
+span {
+  display: block;
+}
+
+button {
+  background: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.product__price-container {
+  display: flex;
+  align-items: center;
+  gap: var(--size-16px);
+  flex-wrap: wrap;
+}
+
+.cta__btn {
+  color: var(--clr-white);
+  background-color: var(--clr-green500-button);
+  padding: 1em 2em;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 320px) {
+  .product__content-wrapper {
+    /* max-width: 21.875rem; */
+  }
+
+  .card__content-wrapper {
+    padding: var(--size-24px);
+  }
+}
+
+@media (min-width: 600px) {
+  .product__content-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__content-wrapper {
+    padding: var(--size-32px);
+  }
+}

@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* Fontfamily */
+  --font-fam-primary: "Montserrat", sans-serif;
+  --font-fam-secondary: "Fraunces", serif;
+
+  /* COLOR */
+  --clr-bg-cream: hsl(30, 38%, 92%);
+  --clr-gray: hsl(228, 12%, 48%);
+  --clr-green500-button: hsl(158, 36%, 37%);
+  --clr-green700-active-button: hsl(158, 42%, 18%);
+  --clr-black: hsl(212, 21%, 14%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* LETTER SPACING */
+  --ls-0px: 0px;
+  --ls-5px: 0.5em;
+
+  /*  LINE HEIGHT */
+  --lh-100: 1;
+  --lh-160: 1.6;
+  --lh-110: 1.1;
+  --lh-120: 1.2;
+  /* BORDER RADIUS */
+  --br-24px: 1.5rem;
+  --br-12px: 0.75rem;
+
+  /* SPACING */
+  --size-4px: 0.25rem;
+  --size-8px: 0.5rem;
+  --size-12px: 0.75rem;
+  --size-13px: 0.8125rem;
+  --size-14px: 0.875rem;
+  --size-16px: 1rem;
+  --flow-1rem: 1rem;
+  --size-18px: 1.125rem;
+  --size-20px: 1.25rem;
+  --size-24px: 1.5rem;
+  --size-28px: 1.75rem;
+  --size-1x8px: 1.8rem;
+  --size-32px: 2rem;
+  --size-36px: 2.25rem;
+  --size-40px: 2.5rem;
+  --size-48px: 3rem;
+  --size-60px: 60px;
+  --size-72px: 4.5rem;
+  --size-96px: 6rem;
+  --size-128px: 8rem;
+  --size-160px: 160px;
+  --size-350px: 350px;
+
+  /* font weight */
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+.secondary__title {
+  font-size: var(--size-12px);
+  line-height: var(--lh-120);
+  letter-spacing: var(--ls-5px);
+  color: var(--clr-gray);
+  font-weight: var(--fw-400);
+  text-transform: uppercase;
+}
+
+.primary__title {
+  font-size: var(--size-32px);
+  line-height: var(--lh-100);
+  letter-spacing: var(--ls-0px);
+  font-weight: var(--fw-700);
+  font-family: var(--font-fam-secondary);
+  color: var(--clr-black);
+}
+
+.product__description {
+  font-size: var(--size-14px);
+  line-height: var(--lh-160);
+}
+
+.discount__price {
+  font-size: var(--size-32px);
+  color: var(--clr-green500-button);
+  font-weight: var(--fw-700);
+  font-family: var(--font-fam-secondary);
+}
+
+.full__price {
+  font-size: var(--size-13px);
+  line-height: var(--lh-120);
+  font-weight: var(--fw-400);
+}
+
+.cta__icon {
+  width: 15px;
+  height: 16px;
+  font-weight: var(--fw-700);
+}
+
+.cta__btn {
+  font-weight: var(--fw-700);
+  font-size: var(--size-14px);
+  line-height: var(--lh-110);
+  font-weight: var(--fw-600);
+  border-radius: var(--size-8px);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+/* .cta__btn :is(:hover, :focus) {
+  background-color: var(--clr-green700-active-button);
+} */
+button:hover,
+:active {
+  background-color: var(--clr-green700-active-button);
+}
